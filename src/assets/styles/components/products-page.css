@@ -1,0 +1,48 @@
+.products-page {
+  width: 100%;
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.products-page__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+  animation: fade-in 0.4s ease;
+}
+
+.products-page__modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fade-modal-bg 0.25s ease;
+}
+
+@keyframes fade-modal-bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

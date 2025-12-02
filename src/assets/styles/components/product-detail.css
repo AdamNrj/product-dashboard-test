@@ -1,0 +1,117 @@
+.product-detail {
+  background: var(--color-bg);
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+
+  max-width: 900px;
+  width: 95%;
+  max-height: 85vh;
+  overflow-y: auto;
+
+  position: relative;
+
+  animation: modal-fade-in 0.35s ease;
+}
+
+.product-detail__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  background: transparent;
+  border: none;
+
+  font-size: 32px;
+  line-height: 20px;
+  color: var(--color-text-light);
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.product-detail__close:hover {
+  color: var(--color-text);
+  transform: scale(1.1);
+}
+
+.product-detail__content {
+  display: flex;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.product-detail__image {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+
+  border-radius: var(--radius-md);
+  background: var(--color-bg-gray);
+
+  padding: var(--space-md);
+}
+
+.product-detail__info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.product-detail__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.product-detail__price {
+  font-size: 22px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+}
+
+.product-detail__description {
+  font-size: 15px;
+  color: var(--color-text-light);
+  line-height: 1.45;
+  margin-bottom: var(--space-md);
+}
+
+.product-detail__rating {
+  font-size: 15px;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+.product-detail__rating-count {
+  color: var(--color-muted);
+}
+
+.product-detail__buy {
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: 0.25s ease;
+}
+
+.product-detail__buy:hover {
+  background: #0066dd;
+  transform: translateY(-1px);
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
